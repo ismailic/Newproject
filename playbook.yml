@@ -1,0 +1,29 @@
+---
+- name: "Automate running docker container with ansible"
+  hosts: localhost
+  tasks:
+    - name: stop running container
+      command: docker stop app-py-container 
+      ignore_errors: yes
+
+    - name: remove stopped container
+      command: docker rm app-py-container
+      ignore_errors: yes
+
+    - name: remove used image
+      command: docker rmi app-py-img
+      ignore_errors: yes
+
+    - name: build docker image from dockerfile
+      command: docker build -t app-py-img .
+
+    - name: create tag to image
+      command: docker tag app-py-img ismail17/app-py-img
+      #command: docker tag ismail17/app-py-img
+
+    - name: push image to dockerhub
+      command: docker push ismail17/app-py-img
+     #command: docker push ismail17/img-py:v2
+
+    - name: run container from image
+      command: docker run -d --name app-py-container -p 5000:5000 app-py-img
