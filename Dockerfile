@@ -7,6 +7,8 @@ COPY . /app
 
 RUN pip install -r requirement.txt
 
+VOLUME [ "/app/py" ]
+
 EXPOSE 5000
 
 CMD ["python", "app.py"]
