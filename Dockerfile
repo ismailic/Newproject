@@ -5,8 +5,8 @@ WORKDIR /app
 
 #COPY . /app
 # Copier les tests dans l'image
-#COPY . /app/tests/
-COPY tests/ /app/tests/
+COPY . /app/tests/
+#COPY tests/ /app/tests/
 
 # Installer pytest
 RUN pip install pytest
