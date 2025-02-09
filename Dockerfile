@@ -8,7 +8,7 @@ WORKDIR /app
 COPY . /app/tests/
 # Installer pytest
 RUN pip install pytest
-RUN pip install -r requirement.txt
+RUN pip install -r requirements.txt
 
 VOLUME [ "/app/py" ]
 
