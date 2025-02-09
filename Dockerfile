@@ -1,7 +1,7 @@
 
 FROM python:3.9-slim
 
-WORKDIR /app
+WORKDIR /app/tests/
 
 #COPY . /app
 # Copier les tests dans l'image
