@@ -3,7 +3,7 @@ FROM python:3.9-slim
 
 WORKDIR /app
 
-COPY . /app
+#COPY . /app
 # Copier les tests dans l'image
 COPY . /app/tests/
 # Installer pytest
