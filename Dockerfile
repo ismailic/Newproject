@@ -9,7 +9,7 @@ COPY . /app/tests/
 # Installer pytest
 RUN pip install pytest
 RUN pip install flask
-RUN pip install -r requirements.txt
+#RUN pip install -r requirements.txt
 
 VOLUME [ "/app/py" ]
 
