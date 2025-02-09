@@ -7,6 +7,8 @@ WORKDIR /app
 # Copier les tests dans l'image
 COPY . /app/tests/
 # Installer pytest
+RUN pip install pytest
+RUN pip install flask
 RUN pip install -r requirements.txt
 
 VOLUME [ "/app/py" ]
