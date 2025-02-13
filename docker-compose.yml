@@ -1,6 +1,6 @@
 version: "3"
 services:
   web:
-    image: nginx:latest
+    image: app-py-img:v1.0
     ports:
-      - "80:80"
+      - "80:85"
