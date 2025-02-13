@@ -1,6 +1,6 @@
 version: "3"
 services:
   web:
-    image: app-py-img:v1.0
+    image: ismail17/app-py-img:v1.0
     ports:
       - "80:85"
